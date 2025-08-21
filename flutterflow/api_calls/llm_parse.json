@@ -1,0 +1,37 @@
+{
+  "name": "LLM_Parse",
+  "description": "Snap2Schedule Parse API",
+  "method": "POST",
+  "url": "https://YOUR_CLOUD_ENDPOINT/parse_events",
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "body_type": "JSON",
+  "body": {
+    "text": "{{OCR_TEXT}}",
+    "timezone": "{{TIMEZONE}}",
+    "default_year": "{{DEFAULT_YEAR}}",
+    "semester_window": {
+      "start": "{{SEM_START}}",
+      "end": "{{SEM_END}}"
+    }
+  },
+  "response": {
+    "type": "json",
+    "mappings": [
+      {
+        "name": "events",
+        "path": "events",
+        "type": "array"
+      },
+      {
+        "name": "warnings",
+        "path": "warnings",
+        "type": "array"
+      }
+    ]
+  }
+}

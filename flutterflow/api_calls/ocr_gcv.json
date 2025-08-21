@@ -1,0 +1,37 @@
+{
+  "name": "OCR_GCV",
+  "description": "Google Vision OCR - Text Detection",
+  "method": "POST",
+  "url": "https://vision.googleapis.com/v1/images:annotate?key={{GCV_API_KEY}}",
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "body_type": "JSON",
+  "body": {
+    "requests": [
+      {
+        "image": {
+          "content": "{{BASE64_IMAGE}}"
+        },
+        "features": [
+          {
+            "type": "TEXT_DETECTION"
+          }
+        ]
+      }
+    ]
+  },
+  "response": {
+    "type": "json",
+    "mappings": [
+      {
+        "name": "full_text",
+        "path": "responses[0].fullTextAnnotation.text",
+        "type": "string"
+      }
+    ]
+  }
+}
