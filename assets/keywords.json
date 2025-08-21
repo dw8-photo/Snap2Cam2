@@ -2,62 +2,36 @@
   "labels": [
     {
       "label": "No School",
-      "synonyms": [
-        "no school",
-        "holiday",
-        "break"
-      ],
       "patterns": [
         "\\b(no\\s+school|holiday|break)\\b"
       ]
     },
     {
       "label": "Half Day",
-      "synonyms": [
-        "half day",
-        "early release"
-      ],
       "patterns": [
         "\\b(half[-\\s]?day|early\\s+release)\\b"
       ]
     },
     {
       "label": "Exam",
-      "synonyms": [
-        "exam",
-        "midterm",
-        "final"
-      ],
       "patterns": [
         "\\b(midterm|finals?|exam)\\b"
       ]
     },
     {
       "label": "Quiz",
-      "synonyms": [
-        "quiz"
-      ],
       "patterns": [
         "\\bquiz\\b"
       ]
     },
     {
       "label": "Due",
-      "synonyms": [
-        "due",
-        "assignment",
-        "project"
-      ],
       "patterns": [
         "\\b(assignment|project)\\s+due\\b"
       ]
     },
     {
       "label": "Parent-Teacher Conference",
-      "synonyms": [
-        "parent-teacher",
-        "conference"
-      ],
       "patterns": [
         "\\bparent[-\\s]?teacher\\s+conference\\b"
       ]
